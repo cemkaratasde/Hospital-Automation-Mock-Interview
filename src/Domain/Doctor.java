@@ -1,9 +1,6 @@
 package Domain;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.UUID;
 
 public class Doctor extends CommonAttributes{
     private Hospital hospital;
@@ -75,11 +72,13 @@ public class Doctor extends CommonAttributes{
     @Override
     public String toString() {
         return "Doctor{" +
-                "hospital=" + hospital +
-                ", opeartions=" + opeartions +
-                ", appointment=" + appointment +
+                "id=" + getId() +
+                ", firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", age=" + getAge() +
+                ",hospital=" + hospital +
                 ", DoctorType=" + DoctorType +
-                "salary" + salary +
-        '}';
+                ", salary=" + salary +
+                '}';
     }
 }

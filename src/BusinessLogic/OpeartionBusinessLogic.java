@@ -29,13 +29,13 @@ public class OpeartionBusinessLogic {
                 nurses.size() < setMaxNurseLimitPerOperation()) {
             Operation operation = new Operation(UUID.randomUUID(), hospital, patient, doctors, nurses, tools, appointmentTime);
             operationsRepo.add(operation);
-            patient.getOperations().set(patient.getOperations().size() + 1, operation);
-            hospital.getOperations().set(hospital.getOperations().size() + 1, operation);
+            patient.getOperations().add(operation);
+            hospital.getOperations().add(operation);
             for (int i = 0; i < doctors.size(); i++) {
-                doctors.get(i).getOpeartions().set(doctors.get(i).getOpeartions().size() + 1, operation);
+                doctors.get(i).getOpeartions().add(operation);
             }
             for (int i = 0; i < nurses.size(); i++) {
-                nurses.get(i).getOperations().set(nurses.get(i).getOperations().size() + 1, operation);
+                nurses.get(i).getOperations().add(operation);
             }
             System.out.println("Appointment saved.");
         }

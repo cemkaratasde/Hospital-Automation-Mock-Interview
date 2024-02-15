@@ -8,7 +8,9 @@ public class Patient extends CommonAttributes{
     private List<Operation> operations;
     private List<Appointment> appointments;
 
-    public Patient(){}
+    public Patient(){
+        super();
+    }
 
     public Patient(Integer id, String firstName, String lastName, Integer age, List<Operation> operations, List<Appointment> appointments) {
         super(id, firstName, lastName, age);
@@ -35,8 +37,10 @@ public class Patient extends CommonAttributes{
     @Override
     public String toString() {
         return "Patient{" +
-                "operations=" + operations +
-                ", appointments=" + appointments +
+                "id=" + getId() +
+                ", firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", age=" + getAge() +
                 '}';
     }
 }

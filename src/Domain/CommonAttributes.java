@@ -2,10 +2,10 @@ package Domain;
 
 public class CommonAttributes {
 
-    private Integer id;
-    private String firstName;
-    private String lastName;
-    private Integer age;
+    protected Integer id;
+    protected String firstName;
+    protected String lastName;
+    protected Integer age;
 
     public CommonAttributes() {
     }

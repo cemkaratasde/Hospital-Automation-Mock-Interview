@@ -89,9 +89,6 @@ public class Operation {
                 "id=" + id +
                 ", hospital=" + hospital +
                 ", patient=" + patient +
-                ", doctors=" + doctors +
-                ", nureses=" + nureses +
-                ", toolKit=" + toolKit +
                 ", appointmentDateTime=" + appointmentDateTime +
                 '}';
     }

@@ -35,9 +35,9 @@ public class AppointmentBusinessLogic {
             LocalDateTime now = LocalDateTime.now();
             Appointment appointment = new Appointment(UUID.randomUUID(), hospital, patient, doctor, now);
             appointmentsRepo.add(appointment);
-            patient.getAppointments().set(patient.getAppointments().size() + 1, appointment);
-            doctor.getAppointment().set(doctor.getAppointment().size() + 1, appointment);
-            hospital.getAppointments().set(hospital.getAppointments().size() + 1, appointment);
+            patient.getAppointments().add(appointment);
+            doctor.getAppointment().add(appointment);
+            hospital.getAppointments().add(appointment);
             System.out.println("Appointment created for : " + patient.getId());
         }
         System.out.println("You have already exceeded the monthly appointment limit for a patient\n" +
@@ -45,7 +45,7 @@ public class AppointmentBusinessLogic {
     }
 
     public String returnPatientMaxAppointment() {
-        Integer index = 1;
+        Integer index = 0;
         Integer maxCount = 0;
         for (int i = 0; i < appointmentsRepo.size(); i++) {
             Integer count = 0;

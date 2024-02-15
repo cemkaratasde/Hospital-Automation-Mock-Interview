@@ -40,8 +40,11 @@ public class Nurse extends CommonAttributes{
     @Override
     public String toString() {
         return "Nurse{" +
+                "id=" + getId() +
+                ", firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", age=" + getAge() +
                 "hospital=" + hospital +
-                ", operations=" + operations +
                 '}';
     }
 }

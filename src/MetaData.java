@@ -135,7 +135,11 @@ public class MetaData {
         //Add to database Operations
 
         Operation operation = new Operation(UUID.randomUUID(),hospital,patient,doctorList,nurseList,toolList1,LocalDateTime.now());
+        //ENUM TYPE not OPERATOR
+        Operation operation2 = new Operation(UUID.randomUUID(),hospital,patient,doctorListFalse,nurseList,toolList1,LocalDateTime.now());
         Operation operation3 = new Operation(UUID.randomUUID(),hospital,patient2,doctorList,nurseList,toolList2,LocalDateTime.now());
+
+
 
         List<Operation> operationList = new ArrayList<>();
         operationList.add(operation);
@@ -168,5 +172,7 @@ public class MetaData {
         System.out.println("METADATA LOADED SUCCESSFULLY" + finish + "\n------------------");
         System.out.println(appointmentBusinessLogic.returnPatientMaxAppointment());
         opeartionBusinessLogic.maxOperationCost(hospital);
+        System.out.println(appointmentBusinessLogic.returnAllAppointmentsOfPatitent(patient));
+
     }
 }

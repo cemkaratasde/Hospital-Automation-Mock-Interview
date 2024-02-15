@@ -90,10 +90,6 @@ public class Hospital {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
-                ", doctors=" + doctors +
-                ", nurses=" + nurses +
-                ", operations=" + operations +
-                ", appointments=" + appointments +
                 '}';
     }
 }
